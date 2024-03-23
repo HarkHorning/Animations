@@ -1,0 +1,13 @@
+.left {
+    width: 55%;
+    padding-left: 2rem;
+}
+
+.simpleA {
+    color: gray;
+    font-size: 3.5rem;
+}
+
+#word {
+    color: blue;
+}
