@@ -1,6 +1,6 @@
 .left {
     width: 55%;
-    padding-left: 2rem;
+    padding-left: 2.5rem;
 }
 
 .simpleA {
@@ -10,4 +10,11 @@
 
 #word {
     color: blue;
+}
+
+
+
+#canvas {
+    border: 1px solid grey;
+    border-radius: 0.25rem;
 }
