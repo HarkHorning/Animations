@@ -1,3 +1,5 @@
+// animationOne
+
 const word = document.getElementById('word');
 const answer = ["fast.", "easy.", "effective.", "fun."];
 
@@ -27,6 +29,27 @@ const animationCycle = async () => {
             answerInx ++;
         }
     }
-};
+}; animationCycle();
 
-animationCycle();
+// animationTwo 
+
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+const tileHeight = 48;
+const tileWidth = 23
+const tileSpacing = 25;
+const loadingTime = 150;
+canvas.width = 1000;
+canvas.height = 50;
+
+const loadCycle = async () => {
+    while (true) {
+        for (let i = 0; i < 40; i ++) {
+            let thisBar = i * tileSpacing;
+            ctx.fillStyle = 'grey';
+            ctx.fillRect(thisBar + 1, 1, tileWidth, tileHeight)
+            await timer(loadingTime);
+        } ctx.clearRect(0, 0, canvas.width, canvas.height);
+        await timer(loadingTime);
+    }
+}; loadCycle()
