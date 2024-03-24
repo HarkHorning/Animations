@@ -1,3 +1,7 @@
+body {
+    height: 100%;
+}
+
 .left {
     width: 55%;
     padding-left: 2.5rem;
@@ -12,9 +16,96 @@
     color: blue;
 }
 
-
+/* animationTwo */
 
 #canvas {
     border: 1px solid grey;
     border-radius: 0.25rem;
+}
+
+/* animationThree */
+
+.orbitPage {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.solarContainer {
+    position: relative;
+}
+
+.orbitRing {
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.orbitText {
+    position: absolute;
+    transform: translate(-50%, -75%);
+    width: 20rem;
+}
+
+.ringOne {
+    width: 24rem;
+    height: 24rem;
+    border: 2px dashed rgb(184, 184, 184);
+    border-radius: 25rem;
+}
+
+.ringTwo {
+    width: 29rem;
+    height: 29rem;
+    border: 2px dashed rgb(184, 184, 184);
+    border-radius: 25rem;
+}
+
+.ringThree {
+    width: 42rem;
+    height: 42rem;
+    border: 2px dashed rgb(184, 184, 184);
+    border-radius: 25rem;
+}
+
+.planetOne {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 5rem;
+    position: absolute;
+    left: -13rem;
+    background-color: rgb(61, 61, 255);
+    transform-origin: 13rem 0;
+    animation: orbit 10s linear infinite;
+}
+
+.planetTwo {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 5rem;
+    position: absolute;
+    left: -15.25rem;
+    background-color: rgb(255, 56, 56);
+    transform-origin: 15.25rem 0;
+    animation: orbit 20s linear infinite;
+}
+
+.planetThree {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 5rem;
+    position: absolute;
+    left: -22.75rem;
+    background-color: rgb(255, 143, 62);
+    transform-origin: 22.75rem 0;
+    animation: orbit 40s linear infinite;
+}
+
+@keyframes orbit {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
