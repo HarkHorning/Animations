@@ -26,5 +26,35 @@
             <div class="planetThree"></div>
         </div>
     </div>
+    <div id="colorChangePage">
+        <h2 id="colorOne">Color One</h2>
+        <h2 id="colorTwo">Second Color</h2>
+        <h2 id="colorThree">Colour Number 3</h2>
+        <div class="triangle"></div>
+        <script>
+            const backGround = document.getElementById('colorChangePage');
+            const one = document.getElementById("colorOne");
+            const two = document.getElementById("colorTwo");
+            const three = document.getElementById("colorThree")
+            one.addEventListener('mouseover', () => {
+                backGround.style.backgroundColor = "purple";
+            })
+            one.addEventListener('mouseout', () => {
+                backGround.style.backgroundColor = "rgb(66, 103, 255)";
+            })
+            two.addEventListener('mouseover', () => {
+                backGround.style.backgroundColor = "brown";
+            })
+            two.addEventListener('mouseout', () => {
+                backGround.style.backgroundColor = "rgb(66, 103, 255)";
+            })
+            three.addEventListener('mouseover', () => {
+                backGround.style.backgroundColor = "rgb(228, 228, 158)";
+            })
+            three.addEventListener('mouseout', () => {
+                backGround.style.backgroundColor = "rgb(66, 103, 255)";
+            })
+        </script>
+    </div>
 </body>
 </html>
