@@ -1,55 +1,61 @@
-// animationOne
-
-const word = document.getElementById('word');
-const answer = ["fast.", "easy.", "effective.", "fun."];
-
-let time = 100;
-let answerInx = 0;
-
-function timer(s) {
-    return new Promise((resolve) => setTimeout(resolve, s));
-}
-
-const animationCycle = async () => {
-    while (true) {
-        let thisAnswer = answer[answerInx]
-        for (let i = 0; i < thisAnswer.length; i ++) {
-            word.innerText = thisAnswer.substring(0, i + 1);
-            await timer(time);
-        } await timer(750);
-
-        for (let i = thisAnswer.length; i > 0; i --) {
-            word.innerText = thisAnswer.substring(0, i - 1);
-            await timer(time - 25);
-        } await timer(500);
-
-        if (answerInx === answer.length - 1) {
-            answerInx = 0;
-        } else {
-            answerInx ++;
-        }
-    }
-}; animationCycle();
-
-// animationTwo 
-
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
-const tileHeight = 48;
-const tileWidth = 23
-const tileSpacing = 25;
-const loadingTime = 150;
-canvas.width = 1000;
-canvas.height = 50;
-
-const loadCycle = async () => {
-    while (true) {
-        for (let i = 0; i < 40; i ++) {
-            let thisBar = i * tileSpacing;
-            ctx.fillStyle = 'grey';
-            ctx.fillRect(thisBar + 1, 1, tileWidth, tileHeight)
-            await timer(loadingTime);
-        } ctx.clearRect(0, 0, canvas.width, canvas.height);
-        await timer(loadingTime);
-    }
-}; loadCycle()
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <header></header>
+    <div class="left">
+        <h1 class="simpleA">Simple animations are 
+            <span id="word"></span>
+        </h1>
+        <canvas id="canvas"></canvas>
+    </div>
+    <div class="orbitPage">
+        <div class="solarContainer">
+            <h1 class="orbitText">Some Animations Look Harder Than They Are</h1>
+            <div class="orbitRing ringOne"></div>
+            <div class="planetOne"></div>
+            <div class="orbitRing ringTwo"></div>
+            <div class="planetTwo"></div>
+            <div class="orbitRing ringThree"></div>
+            <div class="planetThree"></div>
+        </div>
+    </div>
+    <div id="colorChangePage">
+        <h2 id="colorOne">Color One</h2>
+        <h2 id="colorTwo">Second Color</h2>
+        <h2 id="colorThree">Colour Number 3</h2>
+        <div class="triangle"></div>
+        <div class="spinner"></div>
+        <script>
+            const backGround = document.getElementById('colorChangePage');
+            const one = document.getElementById("colorOne");
+            const two = document.getElementById("colorTwo");
+            const three = document.getElementById("colorThree")
+            one.addEventListener('mouseover', () => {
+                backGround.style.backgroundColor = "purple";
+            })
+            one.addEventListener('mouseout', () => {
+                backGround.style.backgroundColor = "rgb(66, 103, 255)";
+            })
+            two.addEventListener('mouseover', () => {
+                backGround.style.backgroundColor = "brown";
+            })
+            two.addEventListener('mouseout', () => {
+                backGround.style.backgroundColor = "rgb(66, 103, 255)";
+            })
+            three.addEventListener('mouseover', () => {
+                backGround.style.backgroundColor = "rgb(228, 228, 158)";
+            })
+            three.addEventListener('mouseout', () => {
+                backGround.style.backgroundColor = "rgb(66, 103, 255)";
+            })
+        </script>
+    </div>
+</body>
+</html>
