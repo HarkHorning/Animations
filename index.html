@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css">
     <script src="script.js" defer></script>
     <title>Document</title>
 </head>
-<body>
+<body id="backgroundChangeColor">
+    <nav class="navigation-bar">
+        <h1>Simple Animations</h1>
+    </nav>
     <header></header>
     <div class="left">
         <h1 class="simpleA">Simple animations are 
@@ -30,12 +34,24 @@
         <h2 id="colorOne">Color One</h2>
         <h2 id="colorTwo">Second Color</h2>
         <h2 id="colorThree">Colour Number 3</h2>
-        <div class="triangle"></div>
+        <div class="beak"></div>
+        <div class="head"></div>
+        <div class="eye"></div>
+        <div class="puple"></div>
+        <div class="wing"></div>
+
         <script>
-            const backGround = document.getElementById('colorChangePage');
+            const backGround = document.getElementById('backgroundChangeColor');
             const one = document.getElementById("colorOne");
             const two = document.getElementById("colorTwo");
             const three = document.getElementById("colorThree")
+
+            window.addEventListener('scroll', () => {
+                const scrollAmount = window.scrollY;
+                if (scrollAmount <= 100) {
+                    backGround.style.backgroundColor = "white";
+                }
+            })
             one.addEventListener('mouseover', () => {
                 backGround.style.backgroundColor = "purple";
             })
