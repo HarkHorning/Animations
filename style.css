@@ -1,7 +1,20 @@
-body {
+* {
     margin: 0;
     padding: 0;
-    height: 100%;
+}
+
+body {
+    height: max-content;
+    transition: 1s;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.navigation-bar {
+    padding: 1rem 2rem;
+    width: 100%;
 }
 
 .left {
@@ -28,7 +41,7 @@ body {
 /* animationThree */
 
 .orbitPage {
-    height: 100vh;
+    height: 100svh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -103,23 +116,14 @@ body {
     animation: orbit 40s linear infinite;
 }
 
-@keyframes orbit {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
 #colorChangePage {
     height: 100svh;
     padding-left: 10rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: start;
-    background-color: rgb(66, 103, 255);
+    /* background-color: rgb(66, 103, 255); */
     transition: 1s;
     position: relative;
 }
@@ -143,7 +147,7 @@ h2 {
     color: palevioletred;
 }
 
-.triangle {
+.beak {
     position: absolute;
     right: 20rem;
     width: 0px;
@@ -156,24 +160,7 @@ h2 {
     animation: jump 1s ease-in infinite;
  }
 
-@keyframes jump {
-    0% {
-        transform: translateY(0);
-        transform: rotate(0deg);
-    }
-    15% {
-        transform: translateY(5px);
-        transform: rotate(10deg);
-    }
-    75% {
-        transform: translateY(-15px);
-    }
-    90% {
-        transform: translateY(0);
-    }
- }
-
- .spinner {
+ .eye {
     position: absolute;
     right: 20rem;
     transform: translateY(5px);
@@ -181,4 +168,45 @@ h2 {
     height: 40px;
     border-radius: 20px;
     background-color: yellow;
+ }
+
+ .puple {
+    position: absolute;
+    right: 20.5rem;
+    transform: translateY(5px);
+    width: 15px;
+    height: 15px;
+    border-radius: 20px;
+    background-color: rgb(0, 0, 0);
+    transform-origin: left;
+    transition: 1s;
+    animation: eye-roll 1s ease-in infinite;
+ }
+
+ .head {
+    position: absolute;
+    right: 15rem;
+    transform: translateY(5px);
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    background-color: rgb(138, 137, 166);
+    transition: 1s;
+    animation: reduced-jump 1s ease-in infinite;
+ }
+
+ .wing {
+    position: absolute;
+    top: -2rem;
+    right: 8rem;
+    /* transform: translateY(5px); */
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 0 150px 400px 0;
+    border-color: transparent transparent #32e7ff transparent;
+    background-color: transparent;
+    transition: 1s;
+    animation: wing-flap 1s ease-in infinite;
+    transform-origin: bottom;
  }
