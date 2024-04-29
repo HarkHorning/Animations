@@ -13,11 +13,11 @@
         transform: rotate(0deg);
     }
     15% {
-        transform: translateY(5px);
-        transform: rotate(10deg);
+        transform: translateY(15px);
     }
     75% {
-        transform: translateY(-15px);
+        transform: translateY(-5px);
+        transform: rotate(10deg);
     }
     90% {
         transform: translateY(0);
@@ -30,11 +30,11 @@
         transform: rotate(0deg);
     }
     5% {
-        transform: translateY(-2px);
+        transform: translateY(12px);
         transform: rotate(5deg);
     }
     75% {
-        transform: translateY(10px);
+        transform: translateY(-2px);
     }
     90% {
         transform: translateY(0);
@@ -43,10 +43,10 @@
 
  @keyframes wing-flap {
     0% {
-        transform: translateY(0);
+        transform: translateY(-4px);
     }
     25% {
-        transform: translateY(-10px);
+        transform: translateY(10px);
         transform: rotateX(140deg);
     }
     90% {
@@ -59,10 +59,28 @@
     0% {
         transform: rotateZ(0deg);
     }
-    50% {
+    15% {
         transform: rotateZ(360deg);
     }
-    75% {
+    30% {
         transform: rotateZ(180deg);
+    }
+    65% {
+        transform: rotateZ(360deg);
+    }
+    70% {
+        transform: rotateZ(180deg);
+    }
+    80% {
+        transform: rotateZ(300deg);
+    }
+ }
+
+ @keyframes tail {
+    0% {
+        transform: rotate(0deg);
+    }
+    15% {
+        transform: rotate(10deg);
     }
  }
