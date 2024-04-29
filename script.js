@@ -46,7 +46,7 @@ const loadCycle = async () => {
     while (true) {
         for (let i = 0; i < 40; i ++) {
             let thisBar = i * tileSpacing;
-            ctx.fillStyle = 'grey';
+            ctx.fillStyle = 'purple';
             ctx.fillRect(thisBar + 1, 1, tileWidth, tileHeight)
             await timer(loadingTime);
         } ctx.clearRect(0, 0, canvas.width, canvas.height);
