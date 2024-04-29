@@ -6,15 +6,16 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="animations.css">
     <script src="script.js" defer></script>
-    <title>Document</title>
+    <title>Simple Animations</title>
 </head>
 <body id="backgroundChangeColor">
     <nav class="navigation-bar">
-        <h1>Simple Animations</h1>
+        <h1 class="site-title">Simple Animations</h1>
     </nav>
     <header></header>
     <div class="left">
-        <h1 class="simpleA">Simple animations are 
+        <h1 class="simpleA">
+            Simple animations are 
             <span id="word"></span>
         </h1>
         <canvas id="canvas"></canvas>
@@ -27,14 +28,21 @@
             <div class="orbitRing ringTwo"></div>
             <div class="planetTwo"></div>
             <div class="orbitRing ringThree"></div>
-            <div class="planetThree"></div>
+            <div class="planetThree">
+                <div class="moon"></div>
+            </div>
         </div>
     </div>
     <div id="colorChangePage">
         <h2 id="colorOne">Color One</h2>
         <h2 id="colorTwo">Second Color</h2>
         <h2 id="colorThree">Colour Number 3</h2>
+        <div class="pter-background"></div>
+        <div class="pter-background bg-one"></div>
+        <div class="pter-background bg-two"></div>
+        <div class="pter-background bg-three"></div>
         <div class="beak"></div>
+        <div class="tail"></div>
         <div class="head"></div>
         <div class="eye"></div>
         <div class="puple"></div>
@@ -50,6 +58,15 @@
                 const scrollAmount = window.scrollY;
                 if (scrollAmount <= 100) {
                     backGround.style.backgroundColor = "white";
+                }
+                else if (scrollAmount >= 200 && scrollAmount <= 1300) {
+                    backGround.style.backgroundColor = "rgb(17, 20, 68)";
+                }
+                else if (scrollAmount >= 2500 && scrollAmount <= 3300) {
+                    backGround.style.backgroundColor = "rgb(228, 228, 158)";
+                }
+                else {
+                backGround.style.backgroundColor = "rgb(66, 103, 255)";
                 }
             })
             one.addEventListener('mouseover', () => {
@@ -71,6 +88,9 @@
                 backGround.style.backgroundColor = "rgb(66, 103, 255)";
             })
         </script>
+    </div>
+    <div class="fourth-section">
+        <div class="grey-section"></div>
     </div>
 </body>
 </html>
