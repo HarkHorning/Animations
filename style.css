@@ -5,7 +5,7 @@
 
 body {
     height: max-content;
-    transition: 1s;
+    transition: 2s;
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
@@ -17,13 +17,21 @@ body {
     width: 100%;
 }
 
+.site-title {
+    letter-spacing: 0.25rem;
+}
+
 .left {
-    width: 55%;
+    height: 100svh;
+    width: 90%;
     padding-left: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
 }
 
 .simpleA {
-    color: gray;
+    color: rgb(17, 20, 68);
     font-size: 3.5rem;
 }
 
@@ -36,6 +44,7 @@ body {
 #canvas {
     border: 1px solid grey;
     border-radius: 0.25rem;
+    height: 5rem;
 }
 
 /* animationThree */
@@ -58,6 +67,7 @@ body {
 
 .orbitText {
     position: absolute;
+    color: white;
     transform: translate(-50%, -75%);
     width: 20rem;
 }
@@ -114,6 +124,20 @@ body {
     background-color: rgb(255, 143, 62);
     transform-origin: 22.75rem 0;
     animation: orbit 40s linear infinite;
+    position: relative;
+}
+
+.moon {
+    position: absolute;
+    left: 25px;
+    top: -50px;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 5rem;
+    background-color: #beaef7;
+    transform-origin: left 80px;
+    animation: orbit 4s linear infinite;
+
 }
 
 #colorChangePage {
@@ -147,13 +171,47 @@ h2 {
     color: palevioletred;
 }
 
+.pter-background {
+    z-index: -1;
+    position: absolute;
+    right: 20rem;
+    width: 25rem;
+    height: 18rem;
+    border-radius: 5.25rem;
+    background-color: #beaef7;
+}
+
+.bg-one {
+    top: 11rem;
+    left: 6rem;
+    width: 18rem;
+    height: 8rem;
+    border-radius: 5.25rem;
+}
+
+.bg-two {
+    top: 8rem;
+    right: 3rem;
+    width: 14rem;
+    height: 8rem;
+    border-radius: 5.25rem;
+}
+
+.bg-three {
+    top: 28rem;
+    right: 15rem;
+    width: 18rem;
+    height: 8rem;
+    border-radius: 5.25rem;
+}
+
 .beak {
     position: absolute;
     right: 20rem;
     width: 0px;
     height: 0px;
     border-style: solid;
-    border-width: 0 0 150px 250px;
+    border-width: 0 0 125px 250px;
     border-color: transparent transparent #FF4532 transparent;
     transform: rotate(0deg);
     transition: 1s;
@@ -177,10 +235,9 @@ h2 {
     width: 15px;
     height: 15px;
     border-radius: 20px;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(17, 20, 68);
     transform-origin: left;
-    transition: 1s;
-    animation: eye-roll 1s ease-in infinite;
+    animation: eye-roll 5s linear infinite;
  }
 
  .head {
@@ -197,16 +254,44 @@ h2 {
 
  .wing {
     position: absolute;
-    top: -2rem;
-    right: 8rem;
+    top: -1rem;
+    right: 10.5rem;
     /* transform: translateY(5px); */
     width: 0px;
     height: 0px;
     border-style: solid;
-    border-width: 0 150px 400px 0;
-    border-color: transparent transparent #32e7ff transparent;
+    border-width: 0 125px 400px 0;
+    border-color: transparent transparent #a332ff transparent;
     background-color: transparent;
     transition: 1s;
     animation: wing-flap 1s ease-in infinite;
     transform-origin: bottom;
+ }
+
+ .tail {
+    position: absolute;
+    right: 0rem;
+    width: 0px;
+    height: 0px;
+    transform-origin: left;
+    border-style: solid;
+    border-width: 0 240px 75px 0;
+    border-color: transparent transparent #ffc832 transparent;
+    transform: rotate(0deg);
+    transition: 1s;
+    animation: tail 1s ease-in infinite;
+ }
+
+ .fourth-section {
+    height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .grey-section {
+    height: 95%;
+    width: 95%;
+    border-radius: 5rem;
+    background-color: rgb(73, 71, 71);
  }
