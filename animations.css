@@ -7,6 +7,20 @@
     }
 }
 
+@keyframes rise {
+    0% {
+        transform: translateY(0);
+        transform: rotate(0deg);
+    }
+    15% {
+        transform: translateY(20px);
+    }
+    65% {
+        transform: translateY(-5px);
+        /* transform: rotate(10deg); */
+    }
+ }
+
 @keyframes jump {
     0% {
         transform: translateY(0);
@@ -51,7 +65,7 @@
     }
     90% {
         transform: translateY(-2px);
-        transform: rotateX(90deg);
+        transform: rotateX(70deg);
     }
  }
 
@@ -82,5 +96,14 @@
     }
     15% {
         transform: rotate(10deg);
+    }
+ }
+
+ @keyframes leg {
+    0% {
+        transform: rotate(2deg);
+    }
+    15% {
+        transform: rotate(18deg);
     }
  }

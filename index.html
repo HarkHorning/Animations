@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="pterodactyl.css">
     <script src="script.js" defer></script>
     <title>Simple Animations</title>
 </head>
 <body id="backgroundChangeColor">
-    <nav class="navigation-bar">
+    <nav class="navigation-bar" id="navBar">
         <h1 class="site-title">Simple Animations</h1>
     </nav>
     <header></header>
@@ -18,7 +19,7 @@
             Simple animations are 
             <span id="word"></span>
         </h1>
-        <canvas id="canvas"></canvas>
+        <!-- <canvas id="canvas"></canvas> -->
     </div>
     <div class="orbitPage">
         <div class="solarContainer">
@@ -34,33 +35,40 @@
         </div>
     </div>
     <div id="colorChangePage">
-        <h2 id="colorOne">Color One</h2>
-        <h2 id="colorTwo">Second Color</h2>
-        <h2 id="colorThree">Colour Number 3</h2>
+        <div class="wordsCSS">
+            <h2 id="colorOne">CSS Animations</h2>
+            <h2 id="colorTwo">Aren't Always</h2>
+            <h2 id="colorThree">The Best</h2>
+        </div>
         <div class="pter-background"></div>
         <div class="pter-background bg-one"></div>
         <div class="pter-background bg-two"></div>
         <div class="pter-background bg-three"></div>
-        <div class="beak"></div>
-        <div class="tail"></div>
-        <div class="head"></div>
-        <div class="eye"></div>
-        <div class="puple"></div>
-        <div class="wing"></div>
-
+        <div class="ptero">
+            <div class="beak"></div>
+            <div class="tail"></div>
+            <div class="head"></div>
+            <div class="eye"></div>
+            <div class="puple"></div>
+            <div class="leg"></div>
+            <div class="wing"></div>
+        </div>
         <script>
             const backGround = document.getElementById('backgroundChangeColor');
             const one = document.getElementById("colorOne");
             const two = document.getElementById("colorTwo");
             const three = document.getElementById("colorThree")
+            const navBar = document.getElementById('navBar')
 
             window.addEventListener('scroll', () => {
                 const scrollAmount = window.scrollY;
-                if (scrollAmount <= 100) {
-                    backGround.style.backgroundColor = "white";
+                if (scrollAmount <= 10) {
+                    backGround.style.backgroundColor = "rgb(209, 216, 235)";
+                    navBar.style.color = 'white';
                 }
-                else if (scrollAmount >= 200 && scrollAmount <= 1300) {
+                else if (scrollAmount >= 10 && scrollAmount <= 1100) {
                     backGround.style.backgroundColor = "rgb(17, 20, 68)";
+                    navBar.style.color = 'white';
                 }
                 else if (scrollAmount >= 2500 && scrollAmount <= 3300) {
                     backGround.style.backgroundColor = "rgb(228, 228, 158)";

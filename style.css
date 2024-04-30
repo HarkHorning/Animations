@@ -10,11 +10,15 @@ body {
     display: flex;
     flex-direction: column;
     gap: 5rem;
+    position: relative;
+    background-color: rgb(209, 216, 235);
 }
 
 .navigation-bar {
     padding: 1rem 2rem;
     width: 100%;
+    background-color: rgb(37, 37, 37);
+    position: absolute;
 }
 
 .site-title {
@@ -22,17 +26,19 @@ body {
 }
 
 .left {
-    height: 100svh;
+    height: 14svh;
     width: 90%;
     padding-left: 2.5rem;
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+    /* gap: 8rem; */
 }
 
 .simpleA {
-    color: rgb(17, 20, 68);
-    font-size: 3.5rem;
+    color: rgb(255, 255, 255);
+    font-size: 5.5rem;
 }
 
 #word {
@@ -50,7 +56,7 @@ body {
 /* animationThree */
 
 .orbitPage {
-    height: 100svh;
+    height: 90svh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -101,7 +107,7 @@ body {
     left: -13rem;
     background-color: rgb(61, 61, 255);
     transform-origin: 13rem 0;
-    animation: orbit 10s linear infinite;
+    animation: orbit 8s linear infinite;
 }
 
 .planetTwo {
@@ -123,7 +129,7 @@ body {
     left: -22.75rem;
     background-color: rgb(255, 143, 62);
     transform-origin: 22.75rem 0;
-    animation: orbit 40s linear infinite;
+    animation: orbit 35s linear infinite;
     position: relative;
 }
 
@@ -136,7 +142,7 @@ body {
     border-radius: 5rem;
     background-color: #beaef7;
     transform-origin: left 80px;
-    animation: orbit 4s linear infinite;
+    animation: orbit 3s linear infinite;
 
 }
 
@@ -157,6 +163,19 @@ h2 {
     font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
     font-weight: 700;
     font-size: 6rem;
+}
+
+.wordsCSS {
+    position: absolute;
+    /* top: -8rem; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.css-color {
+    color: rgb(17, 20, 68);
 }
 
 #colorOne {
@@ -182,7 +201,7 @@ h2 {
 }
 
 .bg-one {
-    top: 11rem;
+    top: 4rem;
     left: 6rem;
     width: 18rem;
     height: 8rem;
@@ -204,83 +223,6 @@ h2 {
     height: 8rem;
     border-radius: 5.25rem;
 }
-
-.beak {
-    position: absolute;
-    right: 20rem;
-    width: 0px;
-    height: 0px;
-    border-style: solid;
-    border-width: 0 0 125px 250px;
-    border-color: transparent transparent #FF4532 transparent;
-    transform: rotate(0deg);
-    transition: 1s;
-    animation: jump 1s ease-in infinite;
- }
-
- .eye {
-    position: absolute;
-    right: 20rem;
-    transform: translateY(5px);
-    width: 40px;
-    height: 40px;
-    border-radius: 20px;
-    background-color: yellow;
- }
-
- .puple {
-    position: absolute;
-    right: 20.5rem;
-    transform: translateY(5px);
-    width: 15px;
-    height: 15px;
-    border-radius: 20px;
-    background-color: rgb(17, 20, 68);
-    transform-origin: left;
-    animation: eye-roll 5s linear infinite;
- }
-
- .head {
-    position: absolute;
-    right: 15rem;
-    transform: translateY(5px);
-    width: 80px;
-    height: 80px;
-    border-radius: 20px;
-    background-color: rgb(138, 137, 166);
-    transition: 1s;
-    animation: reduced-jump 1s ease-in infinite;
- }
-
- .wing {
-    position: absolute;
-    top: -1rem;
-    right: 10.5rem;
-    /* transform: translateY(5px); */
-    width: 0px;
-    height: 0px;
-    border-style: solid;
-    border-width: 0 125px 400px 0;
-    border-color: transparent transparent #a332ff transparent;
-    background-color: transparent;
-    transition: 1s;
-    animation: wing-flap 1s ease-in infinite;
-    transform-origin: bottom;
- }
-
- .tail {
-    position: absolute;
-    right: 0rem;
-    width: 0px;
-    height: 0px;
-    transform-origin: left;
-    border-style: solid;
-    border-width: 0 240px 75px 0;
-    border-color: transparent transparent #ffc832 transparent;
-    transform: rotate(0deg);
-    transition: 1s;
-    animation: tail 1s ease-in infinite;
- }
 
  .fourth-section {
     height: 100svh;
