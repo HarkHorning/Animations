@@ -107,3 +107,74 @@
         transform: rotate(18deg);
     }
  }
+
+
+
+ /* t-rex */
+
+ @keyframes walk {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-2deg);
+    }
+    75% {
+        transform: rotate(2deg);
+    }
+ }
+
+ @keyframes torso-walk {
+    0% {
+        transform: translateY(0rem);
+    }
+    25% {
+        transform: translateY(0.5rem);
+    }
+    75% {
+        transform: translateY(-0.5rem);
+    }
+ }
+
+ @keyframes leg-walk {
+    0% {
+        transform: rotate(28deg);
+    }
+    25% {
+        transform: rotate(-18deg);
+    }
+    75% {
+        transform: rotate(10deg);
+    }
+ }
+ @keyframes leg-walk-back {
+    0% {
+        transform: rotate(-10deg);
+    }
+    50% {
+        transform: rotate(28deg);
+    }
+    75% {
+        transform: rotate(-18deg);
+    }
+ }
+
+ @keyframes leg-bottom-walk {
+
+    0% {
+        transform: translateX(-4.5rem);
+        /* transform: rotate(-28deg); */
+    }
+    25% {
+        transform: translateX(2rem);
+        /* transform: rotate(-18deg); */
+    }
+    75% {
+        transform: translateX(-2.5rem);
+        /* transform: rotate(0deg); */
+    }    
+    100% {
+        transform: translateX(-4.5rem);
+        /* transform: rotate(0deg); */
+    }
+ }

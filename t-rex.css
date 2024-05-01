@@ -1,0 +1,174 @@
+.t-rex {
+    position: relative;
+    left: 35%;
+    animation: walk 1s ease-out infinite;
+}
+
+.t-head {
+    position: absolute;
+    width: 15rem;
+    height: 9rem;
+    border-radius: 2rem;
+    background-color: goldenrod;
+}
+.t-eye {
+    position: absolute;
+    left: 5rem;
+    top: 1rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 1rem;
+    background-color: white;
+}
+
+.t-puple {
+    position: absolute;
+    left: 6rem;
+    top: 1.5rem;
+    transform: translateY(5px);
+    width: 15px;
+    height: 15px;
+    border-radius: 20px;
+    background-color: rgb(17, 20, 68);
+    transform-origin: left;
+    animation: eye-roll 5s linear infinite;
+ }
+
+ .teeth {
+    position: absolute;
+    left: 7rem;
+    top: 6rem;
+    width: 1.75rem;
+    height: 1.75rem;
+    background-color: white;
+    border-radius: 0 0 1rem 1rem;
+ }
+
+ .teeth-two {
+    position: absolute;
+    left: 9rem;
+    top: 6rem;
+    width: 1.75rem;
+    height: 1.75rem;
+    background-color: white;
+    border-radius: 0 0 1rem 1rem;
+ }
+ .teeth-three {
+    position: absolute;
+    left: 11rem;
+    top: 6rem;
+    width: 1.75rem;
+    height: 1.75rem;
+    background-color: white;
+    border-radius: 0 0 1rem 1rem;
+ }
+ .teeth-four {
+    position: absolute;
+    left: 13rem;
+    top: 6rem;
+    width: 1.75rem;
+    height: 1.75rem;
+    background-color: white;
+    border-radius: 0 0 1rem 1rem;
+ }
+
+.t-torso {
+    position: absolute;
+    width: 18rem;
+    top: 5rem;
+    height: 11rem;
+    border-radius: 5rem 5rem 50% 50%;
+    right: 1rem;
+    animation: torso-walk 1s ease-out infinite;
+
+}
+.t-torso-inner {
+    position: absolute;
+    transform: rotate(-10deg);
+    width: 18rem;
+    height: 11rem;
+    border-radius: 5rem 5rem 50% 50%;
+    background-color: antiquewhite;
+}
+
+.t-leg {
+    position: absolute;
+    height: 9rem;
+    width: 5rem;
+    transform: rotate(28deg);
+    border-radius: 40%;
+    background-color: rgb(196, 168, 134);
+    right: 11rem;
+    top: 10rem;
+    transform-origin: top;
+    animation: leg-walk 1s linear infinite;
+}
+
+.t-leg-back {
+    position: absolute;
+    height: 9rem;
+    width: 5rem;
+    transform: rotate(-18deg);
+    border-radius: 40%;
+    background-color: rgb(95, 75, 50);
+    right: 10.5rem;
+    top: 10rem;
+    transform-origin: top;
+    animation: leg-walk-back 1s linear infinite;
+}
+
+.t-leg-bottom {
+    position: absolute;
+    height: 10rem;
+    width: 2.5rem;
+    border-radius: 40%;
+    right: 12rem;
+    top: 16rem;
+    transform-origin: top;
+    /* transform: translateX(0rem); */
+
+    animation: leg-bottom-walk 1s linear infinite;
+
+}
+.t-leg-bottom-inner {
+    position: absolute;
+    height: 10rem;
+    width: 2.5rem;
+    border-radius: 40%;
+    transform: rotate(-26deg);
+    background-color: rgb(209, 117, 30);
+    transform-origin: top;
+}
+
+.t-tail-one {
+    position: absolute;
+    width: 8rem;
+    top: 8rem;
+    transform: rotate(-6deg);
+    height: 5rem;
+    border-radius: 100% 5rem 5rem 100%;
+    background-color: rgb(66, 114, 82);
+    right: 20rem;
+}
+
+.t-tail-two {
+    position: absolute;
+    width: 5rem;
+    top: 9.25rem;
+    transform: rotate(-6deg);
+    height: 3.5rem;
+    border-radius: 100% 2.5rem 2.5rem 100%;
+    background-color: rgb(66, 114, 82);
+    right: 28.5rem;
+}
+
+.t-tail-three {
+    position: absolute;
+    width: 4.5rem;
+    top: 10.25rem;
+    transform: rotate(-6deg);
+    height: 2.5rem;
+    border-radius: 100% 1rem 1rem 100%;
+    background-color: rgb(66, 114, 82);
+    right: 34rem;
+}
